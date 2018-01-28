@@ -7,9 +7,7 @@ const initialState = {
 }
 
 const commaNumberToInt = numberWithComma => parseInt(numberWithComma.split(',').join(''), 10);
-const numberWithCommas = number => {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+const numberWithCommas = number => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 const loansReducer = (state = initialState, action) => {
 	 const { type, payload, loanId, amountToInvest } = action;
