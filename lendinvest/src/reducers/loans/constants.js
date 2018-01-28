@@ -1,1 +1,2 @@
 export const SET_INVESTMENT = 'SET_INVESTMENT';
+export const SET_SELECTED_LOAN = 'SET_SELECTED_LOAN';
