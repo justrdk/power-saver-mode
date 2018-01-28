@@ -16,11 +16,12 @@ const InvestForm = ({ selectedLoan, investLoan }) => {
         </div>
       </div>
       <div className="actions">
-        <div className="ui labeled input">
+        <div className="ui labeled input custom-label-input">
           <label className="ui label">&#163;</label>
           <input type="number" placeholder="Amount" id="amount" ref={node => { input = node }} />
         </div>
-        <div className="ui approve button" onClick={() => investLoan(selectedLoan.id, input.value)}>Invest Now</div>
+        <div className="ui approve positive button" onClick={() => investLoan(selectedLoan.id, input.value)}>Invest Now</div>
+        <div className="ui cancel negative button">Cancel</div>
       </div>
     </div>
     );
