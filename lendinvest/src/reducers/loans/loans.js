@@ -2,7 +2,7 @@ import * as types from './constants';
 const { loans } = require('../../current-loans.json');
 
 const initialState = {
-	investmentLoans: loans,
+  investmentLoans: loans,
   selectedLoan: loans[0]
 }
 
@@ -10,9 +10,9 @@ const commaNumberToInt = numberWithComma => parseInt(numberWithComma.split(',').
 const numberWithCommas = number => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 const loansReducer = (state = initialState, action) => {
-	 const { type, payload, loanId, amountToInvest } = action;
+   const { type, payload, loanId, amountToInvest } = action;
 
-	 switch(type) {
+   switch(type) {
     case types.SET_SELECTED_LOAN:
       return {
         ...state,
@@ -35,9 +35,9 @@ const loansReducer = (state = initialState, action) => {
           };
         })
       }
-	 	default:
-	 		return state;
-	 }
+    default:
+      return state;
+   }
 }
 
 export default loansReducer;

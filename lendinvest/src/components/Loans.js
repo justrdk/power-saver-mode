@@ -11,35 +11,35 @@ const openInvestmentForm = (setSelectedLoan, loan) => {
 };
 
 const getLoans = (loans, setSelectedLoan) => loans.map((loan, index) => {
-	return <div className="ui padded blue segment" key={index}>
-		<div className="ui two column grid">
-			<div className="ui twelve wide  column">
-				<h3 className="ui header">{loan.title}</h3>
-				<div className="meta">
-					<span>
-						<strong> Tranche:</strong> {loan.tranche} --
-						<strong> Available: &#163;</strong>  {loan.available} --
-						<strong> Amount: &#163;</strong> {loan.amount} --
+  return <div className="ui padded blue segment" key={index}>
+    <div className="ui two column grid">
+      <div className="ui twelve wide  column">
+        <h3 className="ui header">{loan.title}</h3>
+        <div className="meta">
+          <span>
+            <strong> Tranche:</strong> {loan.tranche} --
+            <strong> Available: &#163;</strong>  {loan.available} --
+            <strong> Amount: &#163;</strong> {loan.amount} --
             <strong> Annualised Return:</strong> {loan.annualised_return} --
             <strong> LTV:</strong> {loan.ltv} --
-					</span>
-		      	</div>
-		    </div>
-		    <div className="ui right aligned four wide column">
-		    	{ loan.invested && <div className="meta">
+          </span>
+            </div>
+        </div>
+        <div className="ui right aligned four wide column">
+          { loan.invested && <div className="meta">
             <span className="ui green header"><strong>Invested</strong></span>
           </div> }
-		      	<div className="ui primary fluid button" onClick={() => openInvestmentForm(setSelectedLoan, loan)}>Invest in Loan</div>
-	      	</div>
-	    </div>
-	</div>
+            <div className="ui primary fluid button" onClick={() => openInvestmentForm(setSelectedLoan, loan)}>Invest in Loan</div>
+          </div>
+      </div>
+  </div>
 });
 
 const Loans = ({ loans, setSelectedLoan }) => (
-	<div className="column">
-		{getLoans(loans, setSelectedLoan)}
+  <div className="column">
+    {getLoans(loans, setSelectedLoan)}
     <InvestForm />
-	</div>
+  </div>
 );
 
 Loans.displayName = 'Loans';
@@ -51,7 +51,7 @@ Loans.defaultProps = {
 }
 
 const mapStateToProps = ({ loans }) => ({
-	loans: loans.investmentLoans
+  loans: loans.investmentLoans
 });
 
 const mapDispatchToProps = dispatch => ({
