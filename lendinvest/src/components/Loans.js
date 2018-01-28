@@ -19,7 +19,9 @@ const getLoans = (loans, setSelectedLoan) => loans.map((loan, index) => {
 					<span>
 						<strong> Tranche:</strong> {loan.tranche} --
 						<strong> Available: &#163;</strong>  {loan.available} --
-						<strong> Amount: &#163;</strong> {loan.amount}
+						<strong> Amount: &#163;</strong> {loan.amount} --
+            <strong> Annualised Return:</strong> {loan.annualised_return} --
+            <strong> LTV:</strong> {loan.ltv} --
 					</span>
 		      	</div>
 		    </div>
