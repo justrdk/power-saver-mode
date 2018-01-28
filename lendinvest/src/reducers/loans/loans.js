@@ -3,7 +3,7 @@ const { loans } = require('../../current-loans.json');
 
 const initialState = {
   investmentLoans: loans,
-  selectedLoan: loans[0]
+  selectedLoan: {}
 }
 
 const commaNumberToInt = numberWithComma => parseInt(numberWithComma.split(',').join(''), 10);
